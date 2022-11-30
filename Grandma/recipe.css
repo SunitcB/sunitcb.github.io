@@ -1,0 +1,39 @@
+
+.title{
+    text-align: center;
+}
+
+.container{
+    border-bottom: 2px solid gray;
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    padding: 1%;
+    color: #a4a830;
+    text-decoration: underline;
+    background-color: lightgray;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.comments{
+    left: 0;
+    font-style: italic;
+    color: olive;
+    background-color: lightyellow;
+}
+.align-right{
+    width:38%;
+    text-align: right;
+}
+
+.stick-left{
+    position:relative;
+    left:0;
+}

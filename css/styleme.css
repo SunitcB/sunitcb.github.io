@@ -72,6 +72,11 @@ li{
     margin-left:1%;
 }
 
+.stick-left{
+    position:absolute;
+    left:0;
+}
+
 .button a{
     text-decoration: none;
 }

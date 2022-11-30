@@ -45,10 +45,33 @@ table{
     margin: 3%;
 }
 
+.happy:hover, .sad:hover{
+    width:14%;
+    height:14%;
+}
+
 .two-items{
     padding: 5%;
     margin: 3%;
     border: 1px solid lightgrey;
     border-radius: 25px;
     width:50%;
+}
+
+li{
+    padding:1%;
+}
+
+.button{
+    background-color: darkolivegreen;
+    color: white;
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    box-shadow: 2px 2px 2px gray;
+    margin-left:1%;
+}
+
+.button a{
+    text-decoration: none;
 }

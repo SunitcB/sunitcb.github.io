@@ -1,7 +1,9 @@
 
 
 function testAnyFunction(expected, found) {
-    if (expected === found) {
+    if (Array.isArray(expected) && expected.toString() === found.toString()) {
+        return "TEST SUCCEEDED";
+    } else if (expected === found) {
         return "TEST SUCCEEDED";
     } else {
         return "TEST FAILED.  Expected " + expected + " found " + found;
@@ -47,15 +49,24 @@ function multiply(arr) {
     }
 }
 
-function reverseStr(str){
+function reverseStr(str) {
     return str.split("").reverse().join("");
- }
+}
 
-console.log(reverseStr("Another"));
+function findLongestWord(arr) {
+    return arr.map(x => x.length).reduce((acc, y) => y > acc ? y : acc, 0);
+}
+
+function filterLongWords(arr, i) {
+    return arr.filter(x => x.length > i);
+}
+
 
 console.log("TEST RESULT FOR FUNCTION, max : " + testAnyFunction(44, max(33, 44)));
 console.log("TEST RESULT FOR FUNCTION, maxOfThree : " + testAnyFunction(44, maxOfThree(33, 44, 22)));
 console.log("TEST RESULT FOR FUNCTION, isVowel: " + testAnyFunction(false, isVowel("z")));
 console.log("TEST RESULT FOR FUNCTION, sum: " + testAnyFunction(15, sum([1, 2, 3, 4, 5])));
 console.log("TEST RESULT FOR FUNCTION, multiply: " + testAnyFunction(120, multiply([1, 2, 3, 4, 5])));
-console.log("TEST RESULF FOR FUNCTION, reverse: "+testAnyFunction("abc", reverseStr("cba")));
+console.log("TEST RESULF FOR FUNCTION, reverse: " + testAnyFunction("abc", reverseStr("cba")));
+console.log("TEST RESULF FOR FUNCTION, findLongestWord: " + testAnyFunction(7, findLongestWord(["strange", "stir", "as", "flower"])));
+console.log("TEST RESULF FOR FUNCTION, filterLongWords: " + testAnyFunction(["strange", "stir", "flower"], filterLongWords(["strange", "stir", "as", "flower"], 3)));

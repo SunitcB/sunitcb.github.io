@@ -1,0 +1,6 @@
+.profile-pic{
+    width:25%;
+    height:25%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px gray;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MUM Golden Dome Market | SRM System</title>
+    <link rel="stylesheet" href="webform.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h3 class="header">MUM Golden Dome Market ::: SRM System</h3>
+        <ul class="menu">
+            <li class="item">Products</li>
+            <li class="item">Suppliers</li>
+        </ul>
+        <div class="right-container">
+            <span class="message">Hello!</span>
+            <button class="btn-sign-out">Sign Out</button>
+        </div>
+    </div>
+    <form class="new-product-form">
+        <h2>New Product Form</h2>
+        <div class="webform1">
+            <div class="form-group">
+                <div class="form-item-l">
+                    <label for="prodNo">
+                        Product Number
+                    </label>
+                    <input type="text" id="prodNo" name="prodNo">
+                </div>
+
+                <div class="form-item-r">
+                    <label for="quantity">
+                        Quantity in stock
+                    </label>
+                    <input type="number" id="quantity" name="quantity">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item-l">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-item-r">
+                    <label for="supplier">
+                        Supplier
+                    </label>
+                    <select id="supplier" name="supplier">
+                        <option value="">Select a Supplier</option>
+                        <option value="abc">ABC Company</option>
+                        <option value="xyz">XYZ Corporation</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item-l">
+                    <label for="price">
+                        Unit Price
+                    </label>
+                    <input type="number" id="price" name="price">
+                </div>
+
+                <div class="form-item-r">
+                    <label for="supplied-on">
+                        Supplied Date
+                    </label>
+                    <input type="date" id="supplied-on" name="supplied-on">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-border btn-purple"> Reset</button>    
+                <button class="btn-border btn-red"> Cancel</button>   
+                <button type="submit" class="btn-border btn-blue">Add Product</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

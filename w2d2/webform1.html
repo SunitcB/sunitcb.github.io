@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Regular Expressions Example</title>
+  <link rel="stylesheet" href="webform.css">
+</head>
+
+<body class="body-1">
+  <form action="https://google.com">
+    <div class="webform1">
+      <label for="email">
+        Email Address
+      </label>
+      <input type="text" id="email" name="email">
+      <p class="sub-text">We'll never share your email with anyone else.</p>
+
+      <label for="password">
+        Password
+      </label>
+      <input type="password" id="password" name="password" pattern="(?=.[a-z]*)(?=.[A-Z]*)(?=.\d*).{10,}" title="Weak password entry. Password requirements not fulfilled.">
+      <p></p>
+
+      <label for="url">
+        URL
+      </label>
+      <input type="text" id="url" name="url" pattern="^(https:\/\/)|^(http:\/\/)" title="URL should have HTTP or HTTPS protocol">
+
+      <div class="check-box-area">
+        <label for="email">
+          Check me out
+        </label>
+        <input type="checkbox" name="checkMeOut" id="checkMeOut">
+      </div>
+
+      <input type="submit" class="btn-submit">
+    </div>
+  </form>
+</body>
+
+</html>

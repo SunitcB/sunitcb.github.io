@@ -1,0 +1,8 @@
+.circle {
+    position: fixed;
+    border-radius: 50%;
+  }
+  
+  .circle:hover {
+    opacity: 50%;
+  }

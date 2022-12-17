@@ -5,11 +5,11 @@ class CheckingAccount extends Account{
     }
 
     setOverdraftAmt(overAmt){
-        this._overdraftAmt = overAmt;
+        this.overdraftAmt = overAmt;
     }
 
     getOverdraftAmt(){
-        return this._overdraftAmt;
+        return this.overdraftAmt;
     }
 
     withdraw(amount) {
@@ -17,7 +17,8 @@ class CheckingAccount extends Account{
             throw new RangeError("Withdraw amount has to be greater than zero");
         }
         if ((amount + this.getOverdraftAmt()) > this.getBalance()) {
-            throw Error("Insufficient funds");
+            // throw Error("Insufficient funds");
+            console.log("Insufficient funds");
         }
         this._balance -= amount;
     }

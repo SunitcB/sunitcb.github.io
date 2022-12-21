@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Products
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/cart.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <%productList.forEach(product=> {%>
+      <div class="card-view">
+        <h3>
+          <%=product.name%> | <%=product.brand%>
+        </h3>
+        <ul>
+          <li>CPU: <%=product.desc.cpu%>
+          </li>
+          <li>RAM: <%=product.desc.ram.value%>
+              <%=product.desc.ram.unit%>
+          </li>
+          <li>Storage: <%=product.desc.storage.value%>
+              <%=product.desc.storage.unit%>
+          </li>
+        </ul>
+        <p>
+          Price: <%=product.price%><br />
+        </p>
+        <input name="id" type="hidden" value="<%=product.id%>" id="productId" />
+        <input class="button" type="button" value="Add to Cart" />
+      </div>
+      <%})%>
+        <a id="gotoCart" href="/shoppingcart">View Cart</a>
+  </div>
+</body>
+
+</html>

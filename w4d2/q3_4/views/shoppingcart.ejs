@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Products
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div id="container">
+        <%cart.forEach(cartItem=> {%>
+            <div class="card-view">
+                <h3>
+                    <%=cartItem.productName%>
+                </h3>
+                <p>
+                    Price: <%=cartItem.price%><br />
+                </p>
+                <p>
+                    Quantity: <%=cartItem.quantity%>
+                </p>
+            </div>
+            <%})%>
+    </div>
+    <div>
+        Total Amount: 
+        <%=totalAmt%>
+    </div>
+</body>
+
+</html>
